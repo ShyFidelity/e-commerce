@@ -6,23 +6,16 @@ class Tag extends Model {}
 
 Tag.init(
   {
-    // Driver.hasOne(License, {
-    //   foreignKey: 'driver_id',
-    //   onDelete: 'CASCADE',
-    // });
-    
-    // License.belongsTo(Driver, {
-    //   foreignKey: 'driver_id',
-    // });
-    
-    // Driver.hasMany(Car, {
-    //   foreignKey: 'driver_id',
-    //   onDelete: 'CASCADE',
-    // });
-    
-    // Car.belongsTo(Driver, {
-    //   foreignKey: 'driver_id',
-    // });
+    Tag_id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      allowNull: false,
+      autoIncrement: true
+         },
+
+      Tag_name: {
+      type: DataTypes.STRING
+             },
   },
   {
     sequelize,
