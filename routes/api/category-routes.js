@@ -44,11 +44,41 @@ router.post('/', (req, res) => {
   // create a new category
 });
 
-router.put('/:id', (req, res) => {
+router.put('/:id', async (req, res) => {
+  // try {
+  //   const userData = await User.update(req.body, {
+  //     where: {
+  //       id: req.params.id,
+  //     },
+  //   });
+  //   if (!userData[0]) {
+  //     res.status(404).json({ message: 'No user with this id!' });
+  //     return;
+  //   }
+  //   res.status(200).json(userData);
+  // } catch (err) {
+  //   res.status(500).json(err);
+  // }
   // update a category by its `id` value
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', async (req, res) => {
+  // try {
+  //   const locationData = await Location.destroy({
+  //     where: {
+  //       id: req.params.id
+  //     }
+  //   });
+
+  //   if (!locationData) {
+  //     res.status(404).json({ message: 'No location found with this id!' });
+  //     return;
+  //   }
+
+  //   res.status(200).json(locationData);
+  // } catch (err) {
+  //   res.status(500).json(err);
+  // }
   // delete a category by its `id` value
 });
 
