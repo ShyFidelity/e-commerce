@@ -6,23 +6,32 @@ class ProductTag extends Model {}
 
 ProductTag.init(
   {
-    // Driver.hasOne(License, {
-    //   foreignKey: 'driver_id',
-    //   onDelete: 'CASCADE',
-    // });
-    
-    // License.belongsTo(Driver, {
-    //   foreignKey: 'driver_id',
-    // });
-    
-    // Driver.hasMany(Car, {
-    //   foreignKey: 'driver_id',
-    //   onDelete: 'CASCADE',
-    // });
-    
-    // Car.belongsTo(Driver, {
-    //   foreignKey: 'driver_id',
-    // });
+    productTag_id: {
+      type: DataTypes.DECIMAL,
+      primaryKey: true,
+      allowNull: false,
+      autoIncrement: true
+         },
+    product_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'products',
+        key: 'id',
+        unique: false
+      }
+
+    },
+
+    tag_id: {
+      type:DataTypes.INTEGER,
+      references: {
+        model: 'tag',
+        key: 'id',
+        unique: false
+      }
+
+    }
+  
   },
   {
     sequelize,
