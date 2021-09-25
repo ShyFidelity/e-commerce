@@ -15,6 +15,7 @@ Product.init(
       primaryKey: true,
       allowNull: false,
       autoIncrement: true,
+      
     },
 
     product_name: {
